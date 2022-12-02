@@ -31,7 +31,7 @@ def up_next(description):
 
     list_of_similarities = []   #define a list of all of our similarity values
     for i in range(0, len(list_of_NLPs)):
-        value = float(list_of_NLPs[i].similarity(nlp_description))    #this spits out our similarity values
+        value = list_of_NLPs[i].similarity(nlp_description)    #this spits out our similarity values
         list_of_similarities.append(value)
 
     most_similiar_index = list_of_similarities.index(max(list_of_similarities))   #this simply gives us the index of the line that best matched our description
